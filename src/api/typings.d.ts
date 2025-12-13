@@ -191,6 +191,13 @@ declare namespace API {
     tags?: string[]
   }
 
+  type PictureUploadDTO = {
+    fileUrl?: string
+    id?: number
+    picName?: string
+    spaceId?: number
+  }
+
   type PictureVO = {
     category?: string
     createTime?: string
