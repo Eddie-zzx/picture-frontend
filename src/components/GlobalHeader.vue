@@ -65,11 +65,6 @@ const originItems = [
     title: '用户管理',
   },
   {
-    key: 'others',
-    label: h('a', { href: 'https://www.codefather.cn', target: '_blank' }, '编程导航'),
-    title: '编程导航',
-  },
-  {
     key: '/add_picture',
     label: '创建图片',
     title: '创建图片',
