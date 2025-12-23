@@ -1,7 +1,12 @@
 <template>
   <div class="space-user-analyze">
     <a-card title="空间图片用户分析">
-      <v-chart :option="options" style="height: 320px; max-width: 100%" :loading="loading" />
+      <v-chart
+        ref="chartRef"
+        :option="options"
+        style="height: 320px; max-width: 100%"
+        :loading="loading"
+      />
       <template #extra>
         <a-space>
           <a-segmented v-model:value="timeDimension" :options="timeDimensionOptions" />
@@ -15,7 +20,7 @@
 <script setup lang="ts">
 import VChart from 'vue-echarts'
 import 'echarts'
-import { computed, ref, watchEffect } from 'vue'
+import { computed, onMounted, onUnmounted, ref, watchEffect } from 'vue'
 import { getSpaceUserAnalyzeUsingPost } from '@/api/spaceAnalyzeController.ts'
 import { message } from 'ant-design-vue'
 
@@ -105,6 +110,40 @@ const options = computed(() => {
       },
     ],
   }
+})
+
+// 自适应
+const chartRef = ref()
+
+// 处理图标
+const handleResize = () => {
+  if (chartRef.value) {
+    chartRef.value.resize()
+  }
+}
+
+// 防抖函数
+function useDebounce(fn: Function, delay: number) {
+  let timer: NodeJS.Timeout | null = null
+  return function (this: any, ...args: any[]) {
+    if (timer) clearTimeout(timer)
+    timer = setTimeout(() => {
+      fn.apply(this, args)
+    }, delay)
+  }
+}
+//创建防抖后的resize处理函数
+const debounceResize = useDebounce(handleResize, 300)
+
+// 组件挂载时获取数据和添加resize监听
+onMounted(() => {
+  fetchData()
+  window.addEventListener('resize', debounceResize)
+})
+
+//组件卸载时移除resize监听
+onUnmounted(() => {
+  window.removeEventListener('resize', debounceResize)
 })
 </script>
 
