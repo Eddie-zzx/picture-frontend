@@ -47,7 +47,7 @@ import { computed, onUnmounted, ref, watchEffect } from 'vue'
 import { uploadPictureUsingPost } from '@/api/pictureController.ts'
 import { message } from 'ant-design-vue'
 import { useLoginUserStore } from '@/stores/useLoginUserStore.ts'
-import PictureEditWebSocket from '@/utils/pictureEditWebsocket.ts'
+import PictureEditWebSocket from '@/utils/pictureEditWebSocket.ts'
 import { PICTURE_EDIT_ACTION_ENUM, PICTURE_EDIT_MESSAGE_TYPE_ENUM } from '@/constants/picture.ts'
 import { SPACE_TYPE_ENUM } from '@/constants/space.ts'
 
@@ -274,7 +274,6 @@ const exitEdit = () => {
     })
   }
 }
-
 // 编辑图片操作
 const editAction = (action: string) => {
   if (websocket) {
