@@ -176,7 +176,7 @@ const shareModalRef = ref()
 const shareLink = ref<string>()
 // 分享
 const doShare = () => {
-  shareLink.value = `${window.location.protocol}//${window.location.host}/picture/${picture.value.id}`
+  shareLink.value = picture.value.url
   if (shareModalRef.value) {
     shareModalRef.value.openModal()
   }

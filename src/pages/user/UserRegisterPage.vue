@@ -1,7 +1,6 @@
 <template>
   <div id="userRegisterPage">
     <h2 class="title">智能云图库 - 用户注册</h2>
-    <div class="desc">智能协同云图库</div>
     <a-form
       :model="formState"
       name="basic"
@@ -82,4 +81,9 @@ const handleSubmit = async (values: any) => {
 
 </script>
 
-<style scoped></style>
+<style scoped>
+#userRegisterPage {
+  max-width: 360px;
+  margin: 0 auto;
+}
+</style>
