@@ -28,7 +28,7 @@
               <a-menu>
                 <a-menu-item>
                   <router-link to="/my_space">
-                    <UserOutlined />
+                    <ContainerOutlined />
                     我的空间
                   </router-link>
                 </a-menu-item>
@@ -55,7 +55,7 @@ import { useRouter } from 'vue-router'
 import { useLoginUserStore } from '@/stores/useLoginUserStore.ts'
 import { userLogoutUsingPost } from '@/api/userController.ts'
 const loginUserStore = useLoginUserStore()
-import { HomeOutlined, LogoutOutlined, UserOutlined } from '@ant-design/icons-vue'
+import { HomeOutlined, LogoutOutlined, UserOutlined, ContainerOutlined } from '@ant-design/icons-vue'
 
 // 菜单列表
 const originItems = [

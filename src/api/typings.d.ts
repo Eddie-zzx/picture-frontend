@@ -649,9 +649,6 @@ declare namespace API {
     userPassword?: string
     userProfile?: string
     userRole?: string
-    vipCode?: string
-    vipExpireTime?: string
-    vipNumber?: number
   }
 
   type UserAddDTO = {
@@ -701,8 +698,5 @@ declare namespace API {
     userName?: string
     userProfile?: string
     userRole?: string
-    vipCode?: string
-    vipExpireTime?: string
-    vipNumber?: number
   }
 }
