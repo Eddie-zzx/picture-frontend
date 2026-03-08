@@ -32,6 +32,12 @@
                     我的空间
                   </router-link>
                 </a-menu-item>
+                <a-menu-item>
+                  <router-link to="/personal_Info">
+                    <UserOutlined />
+                    个人信息
+                  </router-link>
+                </a-menu-item>
                 <a-menu-item @click="doLogout">
                   <LogoutOutlined />
                   退出登录

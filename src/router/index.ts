@@ -14,6 +14,7 @@ import AddSpacePage from '@/pages/AddSpacePage.vue'
 import SearchPicturePage from '@/pages/SearchPicturePage.vue'
 import SpaceAnalyzePage from '@/pages/SpaceAnalyzePage.vue'
 import SpaceUserManagePage from '@/pages/admin/SpaceUserManagePage.vue'
+import PersonalInfoPage from '@/pages/PersonalInfoPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -79,6 +80,11 @@ const router = createRouter({
       path: '/my_space',
       name: '我的空间',
       component: MySpacePage,
+    },
+    {
+      path: '/personal_info',
+      name: '我的空间',
+      component: PersonalInfoPage,
     },
     {
       path: '/space/:id',
