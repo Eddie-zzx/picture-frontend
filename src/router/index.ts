@@ -83,7 +83,7 @@ const router = createRouter({
     },
     {
       path: '/personal_info',
-      name: '我的空间',
+      name: '个人信息',
       component: PersonalInfoPage,
     },
     {
