@@ -37,7 +37,7 @@
           {{ dayjs(record.createTime).format('YYYY-MM-DD HH:mm:ss') }}
         </template>
         <template v-else-if="column.key === 'action'">
-          <a-button danger @click="doDelete(record.id)">删除</a-button>
+          <a-button v-if="record.userRole !== 'admin'" danger @click="doDelete(record.id)">删除</a-button>
         </template>
       </template>
     </a-table>

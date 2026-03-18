@@ -684,6 +684,7 @@ declare namespace API {
 
   type UserUpdateDTO = {
     id?: number
+    userAccount?: string
     userAvatar?: string
     userName?: string
     userProfile?: string
