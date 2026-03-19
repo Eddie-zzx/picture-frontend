@@ -13,7 +13,9 @@
           <a-descriptions :column="1">
             <a-descriptions-item label="作者">
               <a-space>
-                <a-avatar :size="24" :src="picture.user?.userAvatar" />
+                <a-avatar :size="24" :style="{ backgroundColor: '#1890ff' }">
+                  {{ (picture.user?.userName || '无').charAt(0) }}
+                </a-avatar>
                 <div>{{ picture.user?.userName }}</div>
               </a-space>
             </a-descriptions-item>

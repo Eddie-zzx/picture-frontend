@@ -23,7 +23,9 @@
     >
       <template #bodyCell="{ column, record }">
         <template v-if="column.dataIndex === 'userAvatar'">
-          <a-image :src="record.userAvatar" :width="120" />
+          <a-avatar :style="{ backgroundColor: '#1890ff' }" size="large">
+            {{ (record.userName || '无').charAt(0) }}
+          </a-avatar>
         </template>
         <template v-else-if="column.dataIndex === 'userRole'">
           <div v-if="record.userRole === 'admin'">

@@ -4,7 +4,9 @@
     <a-card class="info-card" bordered :class="{ 'edit-mode': isEditing }">
       <!-- 头像展示 -->
       <div class="avatar-container">
-        <a-avatar :src="userInfo.userAvatar" size="large" icon="user" />
+        <a-avatar size="large" :style="{ backgroundColor: '#1890ff' }">
+          {{ (userInfo.userName || '无').charAt(0) }}
+        </a-avatar>
       </div>
 
       <!-- 个人信息表单 -->

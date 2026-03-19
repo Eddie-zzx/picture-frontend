@@ -28,7 +28,9 @@
       <template #bodyCell="{ column, record }">
         <template v-if="column.dataIndex === 'userInfo'">
           <a-space>
-            <a-avatar :src="record.user?.userAvatar" />
+            <a-avatar :style="{ backgroundColor: '#1890ff' }">
+              {{ (record.user?.userName || '无').charAt(0) }}
+            </a-avatar>
             {{ record.user?.userName }}
           </a-space>
         </template>
