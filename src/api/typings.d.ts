@@ -240,7 +240,6 @@ declare namespace API {
     id?: number
     updateTime?: string
     userAccount?: string
-    userAvatar?: string
     userName?: string
     userProfile?: string
     userRole?: string
@@ -644,7 +643,6 @@ declare namespace API {
     isDelete?: number
     updateTime?: string
     userAccount?: string
-    userAvatar?: string
     userName?: string
     userPassword?: string
     userProfile?: string
@@ -653,10 +651,8 @@ declare namespace API {
 
   type UserAddDTO = {
     userAccount?: string
-    userAvatar?: string
-    userName?: string
-    userProfile?: string
-    userRole?: string
+    userPassword?: string
+    checkPassword?: string
   }
 
   type UserLoginDTO = {
@@ -685,7 +681,6 @@ declare namespace API {
   type UserUpdateDTO = {
     id?: number
     userAccount?: string
-    userAvatar?: string
     userName?: string
     userProfile?: string
     userRole?: string
@@ -695,7 +690,6 @@ declare namespace API {
     createTime?: string
     id?: number
     userAccount?: string
-    userAvatar?: string
     userName?: string
     userProfile?: string
     userRole?: string

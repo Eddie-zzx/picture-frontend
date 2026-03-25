@@ -58,7 +58,6 @@ import { message } from 'ant-design-vue'
 interface UserInfo {
   userAccount: string
   userName: string
-  userAvatar: string
   userProfile: string
 }
 
@@ -67,7 +66,6 @@ const loginUserStore = useLoginUserStore()
 const userInfo = reactive<UserInfo>({
   userAccount: loginUserStore.loginUser?.userAccount || '',
   userName: loginUserStore.loginUser?.userName || '',
-  userAvatar: loginUserStore.loginUser?.userAvatar || '',
   userProfile: loginUserStore.loginUser?.userProfile || '',
 })
 
